@@ -1,0 +1,42 @@
+all:
+  vars:
+    ansible_connection: ssh
+    ansible_user: jincy
+    ansible_password: jincytsl
+    ansible_sudo_pass: jincytsl
+    ansible_become: true
+    kafka_broker_service_environment_overrides:
+      KAFKA_HEAP_OPTS: "-Xmx1g"
+    ssl_enabled: false
+    ssl_mutual_auth_enabled: false
+    kafka_broker_rest_proxy_enabled: false
+
+zookeeper:
+  hosts:
+    ubuntu:
+
+kafka_broker:
+  hosts:
+    ubuntu:
+
+schema_registry:
+  hosts:
+    ubuntu:
+
+kafka_rest:
+  hosts:
+    ubuntu:
+
+kafka_connect:
+  hosts:
+    ubuntu:
+
+control_center:
+  hosts:
+    ubuntu:
+
+ksql:
+  hosts:
+    ubuntu:
+
+
